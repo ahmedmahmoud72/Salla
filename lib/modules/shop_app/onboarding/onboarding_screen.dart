@@ -63,7 +63,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     fontSize: 20.0,
                     color: Colors.blue),
 
-              ))
+              )),
         ],
       ),
       body: Padding(

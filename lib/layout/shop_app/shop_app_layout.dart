@@ -1,15 +1,24 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../modules/shop_app/search/search_screen.dart';
 import '../../shared/components/components.dart';
 import 'cubit/cubit.dart';
 import 'cubit/states.dart';
 
-
-class ShopLayout extends StatelessWidget {
+class ShopLayout extends StatefulWidget {
   const ShopLayout({Key? key}) : super(key: key);
 
+  @override
+  State<ShopLayout> createState() => _ShopLayoutState();
+}
+
+class _ShopLayoutState extends State<ShopLayout> {
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +37,7 @@ class ShopLayout extends StatelessWidget {
                   navigateTo(context, SearchScreen());
                 },
                 icon: const Icon(Icons.search),
-            ),
+              ),
             ],
           ),
           body: cubit.bottomScreens[cubit.currentIndex],
